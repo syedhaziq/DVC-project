@@ -18,7 +18,7 @@ touch requirements.txt
 
 Installed the required dependencies 
 
-``bash
+```bash
 pip install -r requirements.txt
 ```
 
