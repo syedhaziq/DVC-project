@@ -4,7 +4,7 @@ create env
 conda create -n wineq python=3.7 -y
 ```
 
-active
+active the env
 
 ```bash
 conda activate wineq 
@@ -17,6 +17,7 @@ touch requirements.txt
 ```
 
 Installed the required dependencies 
+
 ``bash
 pip install -r requirements.txt
 ```
