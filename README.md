@@ -34,5 +34,5 @@ dvc add data_given/winequality.csv
 git add. 
 ```
 ```bash
-git commit -m "Added all the basic requirements"
+git commit -m "Added all the basic requirement"
 ```
