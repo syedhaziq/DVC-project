@@ -15,10 +15,10 @@ def read_param(config_path):
 
 def get_data(config_path):
     #print(config_path)
-    config = read_data(config_path)
+    config = read_param(config_path)
     #print(config)
     data_path = config["data_source"]["s3_source"]
-    data = pd.read_csv(data_path, sep=".")
+    data = pd.read_csv(data_path, sep=",")
     return data
     
     

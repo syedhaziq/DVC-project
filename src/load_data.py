@@ -4,13 +4,27 @@
 import os
 from get_data import read_param, get_data
 import argparse
+import pandas as pd
 
 def load_and_save(config_path):
-    config = read_param(config_path)
+    configs = read_param(config_path)
     df = get_data(config_path)
+    print(df.head())
+    raw_data_path = configs["load_data"]["raw_dataset_csv"]
     
-    new_cols= [col for col in df.columns]
-    print(new_cols)
+ 
+    old_col_names= df.columns
+    new_col_name = []
+    for name in old_col_names:
+        new_name = name.replace(' ', '_')
+        new_col_name.append(new_name)
+   
+    
+    df.rename(columns=dict(zip(df.columns,new_col_name)), inplace= True)
+    df.to_csv(raw_data_path, sep=',', index=False) 
+
+    
+ 
     
 
 if __name__ == "__main__":
